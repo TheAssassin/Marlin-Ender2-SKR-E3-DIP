@@ -190,6 +190,17 @@
     #define LCD_PINS_ENABLE PB7
     #define LCD_PINS_D4    PB9
 
+
+      #elif ENABLED(ENDER2_DISPLAY)
+        #define BTN_EN1      PA9
+        #define BTN_EN2      PA10
+        #define DOGLCD_CS    PB8
+        #define DOGLCD_A0    PB9
+        #define DOGLCD_SCK   PA15
+        #define DOGLCD_MOSI  PB7
+        #define FORCE_SOFT_SPI
+        #define LCD_BACKLIGHT_PIN -1
+
   #else
     #error "Only CR10_STOCKDISPLAY is currently supported on the BIGTREE_SKR_E3_DIP."
   #endif
