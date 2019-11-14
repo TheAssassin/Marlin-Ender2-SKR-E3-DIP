@@ -1945,8 +1945,10 @@
 // MKS MINI12864 with graphic controller and SD support
 // https://reprap.org/wiki/MKS_MINI_12864
 //
-// ARGH
-//#define MKS_MINI_12864
+#define MKS_MINI_12864
+// the default contrast of 195 is way too high, and setting it every time you start the printer is annoying
+// defining a working default contrast fixes the issue.
+#define DEFAULT_LCD_CONTRAST 150
 
 //
 // FYSETC variant of the MINI12864 graphic controller with SD support
@@ -1965,9 +1967,6 @@
 // (For CR-10 owners who want to replace the Melzi Creality board but retain the display)
 //
 //#define CR10_STOCKDISPLAY
-#define ENDER2_DISPLAY
-//#define MINIPANEL
-//#define MKS_MINI_12864
 
 //
 // ANET and Tronxy Graphical Controller
