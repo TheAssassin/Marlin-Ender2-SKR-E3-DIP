@@ -1030,7 +1030,8 @@
 
   //#define MENU_ADDAUTOSTART               // Add a menu option to run auto#.g files
 
-  #define EVENT_GCODE_SD_STOP "G28XY"       // G-code to run on Stop Print (e.g., "G28XY" or "G27")
+  // retract 1mm, park nozzle (configured with NOZZLE_PARK_FEATURE) **note the P2** https://marlinfw.org/docs/gcode/G027.html
+  #define EVENT_GCODE_SD_STOP "G091\nG1 E-1\nG27 P2"       // G-code to run on Stop Print (e.g., "G28XY" or "G27")
 
   /**
    * Continue after Power-Loss (Creality3D)
